@@ -1,32 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Inter } from "next/font/google";
 import styles from "./page.module.css";
-import Link from "next/link";
 import Header from "@/components/Header";
-import MainCover01 from "@/assets/main-cover01.webp";
-import { cookies } from "next/headers";
-import { createClient } from "@/utils/supabase/server";
 
-export default function Home() {
-  // const f = async () => {
-  //   const cookieStore = cookies();
-  //   const supabase = createClient(cookieStore);
-
-  //   const { error } = await supabase.auth.exchangeCodeForSession(
-  //     code as string
-  //   );
-  //   if (error) {
-  //     console.log(error);
-  //   }
-  // };
-  // const code = router.query["code"];
-  // console.log(code);
-
-  // if (code) {
-  //   f();
-  // }
-
+export default async function Home() {
   return (
     <>
       <Head>
@@ -36,7 +13,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-
       <main className={styles.main}>
         <section className={styles.mainSection}>
           <p className={styles.mainIntro}>

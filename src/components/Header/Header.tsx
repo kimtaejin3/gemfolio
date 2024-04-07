@@ -3,29 +3,13 @@ import styles from "./HeaderStyled.module.css";
 import Btn from "../Commons/Btn/Btn";
 import Image from "next/image";
 import logo from "@/assets/logo.svg";
-// import { cookies } from "next/headers";
 import { createClient } from "@/utils/supabase/server";
-import { useEffect, useState } from "react";
-import { User } from "@supabase/supabase-js";
 
-export function Header() {
-  // const cookieStore = cookies();
-  // const supabase = createClient(cookieStore);
-  // const [user, setUser] = useState<User>();
-
-  // async function getUser() {
-  //   const {
-  //     data: { user },
-  //   } = await supabase.auth.getUser();
-  //   console.log(user);
-  //   if (user) {
-  //     setUser(user);
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   getUser();
-  // }, []);
+export async function Header() {
+  const supabase = createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
 
   return (
     <header className={styles.header}>
@@ -36,8 +20,13 @@ export function Header() {
           </h1>
         </Link>
         <Link href="/signin">
-          <Btn bgColor="primary">시작하기</Btn>
+          {!user && <Btn bgColor="primary">시작하기</Btn>}
         </Link>
+        {user && (
+          <Link href={`portfolio/${user.id}`}>
+            <Btn bgColor="primary">포트폴리오 만들기</Btn>
+          </Link>
+        )}
       </div>
     </header>
   );
