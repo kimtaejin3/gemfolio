@@ -1,0 +1,19 @@
+.container {
+  width: 400px;
+  margin: 100px auto 0;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.kakaoBtn {
+  cursor: pointer;
+  background-color: #f2da00;
+  width: 100%;
+  border: none;
+  padding: 15px 0;
+  border-radius: 10px;
+  font-weight: bold;
+}
