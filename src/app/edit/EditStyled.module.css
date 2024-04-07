@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 8rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  background-color: #343a40;
+  /* color: #838483; */
+  color: #e9ecef;
+}
+
+.portfolio {
+  flex-grow: 1;
+}
+
+.profile {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+}
+
+.portfolioHeader {
+  background-color: var(--secondary);
+  min-height: 40rem;
+  padding: 3.4rem;
+}
+
+.insertArea {
+  width: 300px;
+}
+
+.profileCover {
+  cursor: pointer;
+  height: 350px;
+  flex-grow: 1;
+  flex-shrink: 0;
+  border: 1px solid var(--primary);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.name {
+  height: 100px;
+  width: 100%;
+  font-size: 3rem;
+}
+
+.name::placeholder {
+  font-size: 3rem;
+}

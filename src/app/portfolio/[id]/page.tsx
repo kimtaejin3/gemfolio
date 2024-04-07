@@ -1,7 +1,14 @@
+import { createClient } from "@/utils/supabase/server";
 import styles from "./PortfolioStyle.module.css";
-import { MdAddToPhotos } from "react-icons/md";
 
 export default function Portfolio() {
+  const signOut = async () => {
+    "use server";
+    const supabase = createClient();
+
+    await supabase.auth.signOut();
+  };
+
   return (
     <div className={styles.background}>
       <div className={styles.container}>
@@ -11,8 +18,11 @@ export default function Portfolio() {
             을 지닌 UX/UI 디자이너{" "}
             <span className={styles.highlight}>이가은</span>
           </h1>
+          <form action={signOut}>
+            <button>로그아웃</button>
+          </form>
           <div className={styles.profileCover}>
-            <MdAddToPhotos color="#285455" size={100} />
+            {/* <MdAddToPhotos color="#285455" size={100} /> */}
           </div>
         </div>
         <div className={styles.contents}>
