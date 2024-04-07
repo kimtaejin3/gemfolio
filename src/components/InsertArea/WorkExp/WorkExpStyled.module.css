@@ -15,4 +15,7 @@
   width: 100px;
   height: 100px;
   border: 1px solid var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

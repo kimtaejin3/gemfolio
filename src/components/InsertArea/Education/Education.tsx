@@ -38,7 +38,7 @@ export function Education() {
   return (
     <div className={styles.container}>
       <div className={styles.cover}>
-        <MdAddToPhotos />
+        <MdAddToPhotos color="#285455" size={20} />
       </div>
       <div className={styles.contents}>
         <Slate

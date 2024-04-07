@@ -9,6 +9,7 @@ import Skill from "@/components/InsertArea/Skill";
 import WorkExp from "@/components/InsertArea/WorkExp";
 import { Education } from "@/components/InsertArea/Education/Education";
 import Project from "@/components/InsertArea/Project";
+import { AddBtn } from "@/components/Commons/AddBtn/AddBtn";
 
 export default function Edit() {
   const nameEditor = useMemo(
@@ -102,7 +103,7 @@ export default function Edit() {
         <div className={styles.portfolioContents}>
           <section className={styles.section}>
             <h2 className={styles.sectionTitle}>Skills</h2>
-            <button>+Add a new</button>
+            <AddBtn />
             <div className={`${styles.field} ${styles.skills}`}>
               <Skill />
             </div>
@@ -110,7 +111,8 @@ export default function Edit() {
 
           <section className={styles.section}>
             <h2 className={styles.sectionTitle}>Work Experience</h2>
-            <button>+Add a new</button>
+            <AddBtn />
+
             <div className={styles.field}>
               <WorkExp />
             </div>
@@ -118,7 +120,7 @@ export default function Edit() {
 
           <section className={styles.section}>
             <h2 className={styles.sectionTitle}>Education</h2>
-            <button>+Add a new</button>
+            <AddBtn />
 
             <div className={styles.field}>
               <Education />
@@ -126,7 +128,7 @@ export default function Edit() {
           </section>
           <section className={styles.section}>
             <h2 className={styles.sectionTitle}>Projects</h2>
-            <button>+Add a new</button>
+            <AddBtn />
 
             <div className={`${styles.field} ${styles.projects}`}>
               <Project />

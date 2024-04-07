@@ -6,7 +6,7 @@ interface BtnProps {
   bgColor: string;
 }
 
-export default function Btn({ children, bgColor }: BtnProps) {
+export function Btn({ children, bgColor }: BtnProps) {
   return (
     <button className={`${styles.btn} ${styles[bgColor]}`}>{children}</button>
   );

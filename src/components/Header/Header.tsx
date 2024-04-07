@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./HeaderStyled.module.css";
-import Btn from "../Commons/Btn/Btn";
+import { Btn } from "../Commons/Btn/Btn";
 import Image from "next/image";
 import logo from "@/assets/logo.svg";
 import { createClient } from "@/utils/supabase/server";
