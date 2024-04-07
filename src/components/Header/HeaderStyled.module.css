@@ -1,0 +1,17 @@
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #fff;
+  z-index: 9999;
+}
+
+.container {
+  max-width: var(--landing-maxWidth);
+  margin: 0 auto;
+  padding: 10px 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

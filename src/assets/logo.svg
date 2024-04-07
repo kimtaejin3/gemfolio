@@ -1,0 +1,26 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 486" width="1280" height="486">
+	<title>새 프로젝트DFDFD</title>
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="m287.6 470.2c-123.65 0-223.6-99.95-223.6-223.6 0-123.65 99.95-223.6 223.6-223.6 123.65 0 223.6 99.95 223.6 223.6 0 123.65-99.95 223.6-223.6 223.6z"/>
+		</clipPath>
+	</defs>
+	<style>
+		tspan { white-space:pre } 
+		.s0 { fill: #3fbbbd } 
+		.t1 { font-size: 63px;fill: #ffffff;font-weight: 900;font-family: "PaloAlto", "PaloAlto" } 
+		.t2 { font-size: 63px;fill: #8dd6d7;font-weight: 900;font-family: "PaloAlto", "PaloAlto" } 
+		.t3 { font-size: 63px;fill: #88e6e8;font-weight: 900;font-family: "PaloAlto", "PaloAlto" } 
+	</style>
+	<g clip-path="url(#cp1)">
+		<path id="모양 1" class="s0" d="m287.6 470.2c-123.7 0-223.6-99.9-223.6-223.6 0-123.7 99.9-223.6 223.6-223.6 123.7 0 223.6 99.9 223.6 223.6 0 123.7-99.9 223.6-223.6 223.6z"/>
+		<text id="GEMFOLIO" style="transform: matrix(2.929,0,-0.721,3.951,220.671,341.092)" >
+			<tspan x="0" y="0" class="t1">G</tspan><tspan  y="0" class="t1">E</tspan><tspan  y="0" class="t1">M</tspan><tspan  y="0" class="t1">F</tspan><tspan  y="0" class="t1">O</tspan><tspan  y="0" class="t1">L</tspan><tspan  y="0" class="t1">I</tspan><tspan  y="0" class="t1">O
+</tspan>
+		</text>
+	</g>
+	<text id="GEMFOLIO" style="transform: matrix(2.929,0,-0.721,3.951,209.675,334.983)" >
+		<tspan x="0" y="0" class="t2">G</tspan><tspan  y="0" class="t3">E</tspan><tspan  y="0" class="t3">M</tspan><tspan  y="0" class="t3">F</tspan><tspan  y="0" class="t3">O</tspan><tspan  y="0" class="t3">L</tspan><tspan  y="0" class="t3">I</tspan><tspan  y="0" class="t3">O
+</tspan>
+	</text>
+</svg>

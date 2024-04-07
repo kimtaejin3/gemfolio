@@ -1,0 +1,12 @@
+.btn {
+  cursor: pointer;
+  border: none;
+  padding: 1rem 1.3rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  background-color: white;
+}
+
+.primary {
+  border: 1px solid var(--primary);
+}
