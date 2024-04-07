@@ -1,5 +1,5 @@
 import styles from "./PortfolioStyle.module.css";
-// import { MdAddToPhotos } from "react-icons/md";
+import { MdAddToPhotos } from "react-icons/md";
 
 export default function Portfolio() {
   return (
@@ -12,7 +12,7 @@ export default function Portfolio() {
             <span className={styles.highlight}>이가은</span>
           </h1>
           <div className={styles.profileCover}>
-            {/* <MdAddToPhotos color="#285455" size={100} /> */}
+            <MdAddToPhotos color="#285455" size={100} />
           </div>
         </div>
         <div className={styles.contents}>
