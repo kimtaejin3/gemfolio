@@ -5,12 +5,36 @@ import styles from "./EditStyled.module.css";
 import { MdAddToPhotos } from "react-icons/md";
 import { Editable, ReactEditor, Slate, withReact } from "slate-react";
 import { Descendant, createEditor } from "slate";
+import Skill from "@/components/InsertArea/Skill";
+import WorkExp from "@/components/InsertArea/WorkExp";
+import { Education } from "@/components/InsertArea/Education/Education";
+import Project from "@/components/InsertArea/Project";
 
 export default function Edit() {
-  const editor = useMemo(() => withReact(createEditor() as ReactEditor), []);
+  const nameEditor = useMemo(
+    () => withReact(createEditor() as ReactEditor),
+    []
+  );
+  const roleEditor = useMemo(
+    () => withReact(createEditor() as ReactEditor),
+    []
+  );
+  const introEditor = useMemo(
+    () => withReact(createEditor() as ReactEditor),
+    []
+  );
   const [name, setName] = useState<Descendant[]>([
     {
-      type: "span",
+      children: [{ text: "" }],
+    },
+  ]);
+  const [role, setRole] = useState<Descendant[]>([
+    {
+      children: [{ text: "" }],
+    },
+  ]);
+  const [intro, setIntro] = useState<Descendant[]>([
+    {
       children: [{ text: "" }],
     },
   ]);
@@ -26,28 +50,89 @@ export default function Edit() {
             <div className={styles.insertArea}>
               <div>
                 <Slate
-                  editor={editor}
+                  editor={nameEditor}
                   value={name}
                   onChange={(value) => setName(value)}
                 >
                   <Editable
                     style={{
-                      fontSize: "2.3rem",
+                      fontSize: "3rem",
                       fontWeight: "bold",
                     }}
                     placeholder="이름"
                   />
                 </Slate>
               </div>
-              <div>직책</div>
-              <div>자기소개</div>
+              <div style={{ margin: "2rem 0" }}>
+                <Slate
+                  editor={roleEditor}
+                  value={role}
+                  onChange={(value) => setRole(value)}
+                >
+                  <Editable
+                    style={{
+                      fontSize: "2rem",
+                      fontWeight: "bold",
+                    }}
+                    placeholder="직책"
+                  />
+                </Slate>
+              </div>
+              <div>
+                <Slate
+                  editor={introEditor}
+                  value={intro}
+                  onChange={(value) => setIntro(value)}
+                >
+                  <Editable
+                    style={{
+                      fontSize: "1.6rem",
+                      fontWeight: "bold",
+                    }}
+                    placeholder="간단 자기소개"
+                  />
+                </Slate>
+              </div>
             </div>
             <div className={styles.profileCover}>
               <MdAddToPhotos color="#285455" size={100} />
             </div>
           </div>
         </div>
-        <div className={styles.portfolioContents}>contents</div>
+        <div className={styles.portfolioContents}>
+          <section className={styles.section}>
+            <h2 className={styles.sectionTitle}>Skills</h2>
+            <button>+Add a new</button>
+            <div className={`${styles.field} ${styles.skills}`}>
+              <Skill />
+            </div>
+          </section>
+
+          <section className={styles.section}>
+            <h2 className={styles.sectionTitle}>Work Experience</h2>
+            <button>+Add a new</button>
+            <div className={styles.field}>
+              <WorkExp />
+            </div>
+          </section>
+
+          <section className={styles.section}>
+            <h2 className={styles.sectionTitle}>Education</h2>
+            <button>+Add a new</button>
+
+            <div className={styles.field}>
+              <Education />
+            </div>
+          </section>
+          <section className={styles.section}>
+            <h2 className={styles.sectionTitle}>Projects</h2>
+            <button>+Add a new</button>
+
+            <div className={`${styles.field} ${styles.projects}`}>
+              <Project />
+            </div>
+          </section>
+        </div>
       </div>
     </div>
   );
