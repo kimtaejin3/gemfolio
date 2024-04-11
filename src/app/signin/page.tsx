@@ -10,7 +10,7 @@ export default function Signin() {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: "kakao",
       options: {
-        redirectTo: `${window.location.origin}/auth/callback`,
+        redirectTo: `https://gemfolio-tau.vercel.app/auth/callback`,
       },
     });
     if (error) {
