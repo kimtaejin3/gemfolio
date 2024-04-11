@@ -23,7 +23,7 @@ export async function Header() {
           {!user && <Btn bgColor="primary">시작하기</Btn>}
         </Link>
         {user && (
-          <Link href={`portfolio/${user.id}`}>
+          <Link href="/edit">
             <Btn bgColor="primary">포트폴리오 만들기</Btn>
           </Link>
         )}

@@ -23,8 +23,6 @@ li {
 input,
 textarea {
   border: none;
-  font-weight: 700;
-  background-color: var(--secondary);
 }
 
 textarea {
